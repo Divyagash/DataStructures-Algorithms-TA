@@ -136,7 +136,7 @@ This is read as `'f(x) is big-Oh of g(x)" or `'g asymptotically dominates f."
 \item f= O(f) % f shorthand for f(n)
 \item O(O(f)) = O(f)
 \item kO(f) = O(f)
-\item O(f + k)
+\item O(f + k) = O(f)
 \item O(f) + O(g) = O(max(f , g))
 \item O(f) $*$ O(g) = O(f $*$ g)
 \end{itemize}
@@ -152,7 +152,7 @@ This is read as `'f(x) is big-Oh of g(x)" or `'g asymptotically dominates f."
 \textbf{Solution:} Suppose $\exists$ constants c and
 $n_{o}$ for which: $$n^{2}\leq cn, \forall \ n > n_{o} $$ 
 by \textit{dividing} both sides of the inequality \textit{by n},
-then $n\leq c$ must hold $\forall \ n>n_{o}$.  {\Large \textreferencemark} \\
+then $n\leq c$ must hold $\forall \ n>n_{o}$.   \\
 
 A contradiction!
 
@@ -262,7 +262,7 @@ $$\therefore log(log(n))=O(log^{2}n)$$
  \frametitle{Exercise 2}
 \textbf{Prove:}  $$\lim_{n \to \infty}    \frac{2^{n+1} - 1}{2^{n}}  \ is \  O(1)$$  
 
-\textbf{Solution:}  $$\lim_{n \to \infty}    \frac{2^{n+1} - 1}{2^{n}} =\lim_{n \to \infty}   \frac{(n+1)2^{n}}{n2^{n-1}}=\lim_{n \to \infty}   \frac{2n+2}{1}=2 = O(1) $$\end{frame}
+\textbf{Solution:}  $$\lim_{n \to \infty}    \frac{2^{n+1} - 1}{2^{n}} =\lim_{n \to \infty}   \frac{(n+1)2^{n}}{n2^{n-1}}=\lim_{n \to \infty}   \frac{2n+2}{n}=2 = O(1) $$\end{frame}
 
 \begin{frame}
 \frametitle{Exercise 3}
@@ -379,8 +379,8 @@ Let f(n), g(n) be two non-negative functions. Then: $$\lim_{n \to \infty} \frac{
 \end{center}
 \textbf{Use L'Hospitals! }
 
-$$\lim_{n \to \infty}  \frac{n^{k}}{b^{n}}= \lim_{n \to \infty}  \frac{kn^{k-1}}{nb^{n-1}}
-= \cdots \lim_{n \to \infty} \frac{k!} {b^{n}(log b)^{k}}$$
+$$\lim_{n \to \infty}  \frac{n^{k}}{b^{n}}= \lim_{n \to \infty}  \frac{kn^{k-1}}{log(b)b^{n}}
+= \cdots \lim_{n \to \infty} \frac{k!} {b^{n}(log (b))^{k}}$$
 
 \end{frame}
 
